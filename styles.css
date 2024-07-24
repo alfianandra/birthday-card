@@ -1,0 +1,120 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #d3d3d3, #a9a9a9);
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    animation: backgroundAnimation 10s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(to right, #d3d3d3, #a9a9a9); }
+    50% { background: linear-gradient(to right, #a9a9a9, #d3d3d3); }
+    100% { background: linear-gradient(to right, #d3d3d3, #a9a9a9); }
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.birthday-image {
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.button {
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #e65c50;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles for surprise.html */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.animated-image {
+    width: 45%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animated-image:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
